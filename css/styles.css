@@ -81,22 +81,19 @@ body {
     justify-content: space-between;
 }
 
-.rates-item {
+.rates-button {
     height: 50px;
     width: 50px;
     position: relative;
 }
 
-.rates-text {
-    position: relative;
-    bottom: 2px;
+.rates-radio {
+    display: none;
 }
 
-/* Desktop Design */
-@media(min-width: 720px) {
-    .rates-text {
-        top: 2px;
-    }
+.button-text {
+    position: relative;
+    top: 2px;
 }
 
 /* Active States */
@@ -106,15 +103,15 @@ body {
     background-color: var(--white);
 }
 
-.rates-item:hover {
+.rates-button:hover {
     cursor: pointer;
     color: var(--white);
     background-color: var(--orange);
 }
 
-.rates-item:active {
-    color: var(--white);
+.rates-radio:checked + .rates-button {
     background-color: var(--light-grey);
+    color: var(--white);
 }
 
 /* Mobile Design */
@@ -133,8 +130,12 @@ body {
         padding: 14px 0 9px;
     }
 
-    .rates-item {
+    .rates-button {
         height: 40px;
         width: 40px;
+    }
+
+    .button-text {
+        top: -2px;
     }
 }
