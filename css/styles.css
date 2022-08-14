@@ -1,0 +1,140 @@
+/* Google Fonts https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* Custom Properties */
+:root {
+    --overpass: 'Overpass', sans-serif;
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 20%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Standard Styles */
+body {
+    font-family: var(--overpass);
+    font-size: 15px;
+    color: var(--light-grey);
+    line-height: 1.7;
+}
+
+.circle {
+    background-color: var(--dark-blue);
+    height: 40px;
+    width: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Main */
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+}
+
+/* Main | Card */
+.main-card {
+    background: radial-gradient(75% 75% at center -150px, var(--dark-blue), hsl(215, 27%, 12%));
+    width: 415px;
+    height: 415px;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-submit {
+    color: var(--white);
+    letter-spacing: 1px;
+    border-radius: 50px;
+    padding: 10px 0 5px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    background-color: var(--orange);
+}
+
+/* Main | Card | Texts */
+.texts-title {
+    color: var(--white);
+}
+
+/* Main | Card | Rates */
+.card-rates {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rates-item {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.rates-text {
+    position: relative;
+    bottom: 2px;
+}
+
+/* Desktop Design */
+@media(min-width: 720px) {
+    .rates-text {
+        top: 2px;
+    }
+}
+
+/* Active States */
+.card-submit:hover {
+    cursor: pointer;
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+.rates-item:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.rates-item:active {
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+
+/* Mobile Design */
+@media(max-width: 720px) {
+    body {
+        font-size: 13px;
+    }
+
+    .main-card {
+        width: 330px;
+        height: 360px;
+        padding: 25px;
+    }
+
+    .card-submit {
+        padding: 14px 0 9px;
+    }
+
+    .rates-item {
+        height: 40px;
+        width: 40px;
+    }
+}
