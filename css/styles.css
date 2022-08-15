@@ -36,6 +36,10 @@ body {
     text-align: center;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* Main */
 .main {
     height: 100vh;
@@ -44,6 +48,8 @@ body {
     align-items: center;
     background-color: var(--very-dark-blue);
 }
+
+/* Original State */
 
 /* Main | Card */
 .main-card {
@@ -114,6 +120,22 @@ body {
     color: var(--white);
 }
 
+/* Thank You Card */
+
+/* Main | Card */
+#thankYouCard {
+    text-align: center;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+.card-selection {
+    color: var(--orange);
+    padding: 3px 20px 1px;
+    background-color: var(--dark-blue);
+    border-radius: 30px;
+}
+
 /* Mobile Design */
 @media(max-width: 720px) {
     body {
@@ -137,5 +159,9 @@ body {
 
     .button-text {
         top: -2px;
+    }
+
+    #thankYouCard {
+        padding: 30px;
     }
 }

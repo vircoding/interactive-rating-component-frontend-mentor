@@ -11,7 +11,7 @@
     <body>
         <!-- Main -->
         <main class="main">
-            <main class="main-card">
+            <div id="originalCard" class="main-card">
                 <img src="images/icon-star.svg" alt="Star Icon" class="card-star circle" />
                 <div class="card-texts">
                     <h1 class="texts-title">How did we do?</h1>
@@ -22,39 +22,52 @@
                 </div>
                 <div class="card-rates">
                     <label class="rates-label">
-                        <input type="radio" name="rate" id="rate1" class="rates-radio">
+                        <input type="radio" name="rate" value="1" id="rate1" class="rates-radio" />
                         <div class="rates-button circle">
                             <span class="button-text">1</span>
                         </div>
                     </label>
                     <label class="rates-label">
-                        <input type="radio" name="rate" id="rate2" class="rates-radio">
+                        <input type="radio" name="rate" value="2" id="rate2" class="rates-radio" />
                         <div class="rates-button circle">
                             <span class="button-text">2</span>
                         </div>
                     </label>
                     <label class="rates-label">
-                        <input type="radio" name="rate" id="rate3" class="rates-radio">
+                        <input type="radio" name="rate" value="3" id="rate3" class="rates-radio" />
                         <div class="rates-button circle">
                             <span class="button-text">3</span>
                         </div>
                     </label>
                     <label class="rates-label">
-                        <input type="radio" name="rate" id="rate4" class="rates-radio">
+                        <input type="radio" name="rate" value="4" id="rate4" class="rates-radio" />
                         <div class="rates-button circle">
                             <span class="button-text">4</span>
                         </div>
                     </label>
                     <label class="rates-label">
-                        <input type="radio" name="rate" id="rate5" class="rates-radio">
+                        <input type="radio" name="rate" value="5" id="rate5" class="rates-radio" />
                         <div class="rates-button circle">
                             <span class="button-text">5</span>
                         </div>
                     </label>
                 </div>
-                <span class="card-submit">Submit</span>
-            </main>
+                <span id="submitButton" class="card-submit">Submit</span>
+            </div>
+            <div id="thankYouCard" class="main-card hidden">
+                <figure class="card-picture">
+                    <img
+                        src="images/illustration-thank-you.svg"
+                        alt="Illustration Thank You"
+                        class="picture-img"
+                    />
+                </figure>
+                <div class="card-texts">
+                    <h1 class="texts-title">Thank you!</h1>
+                    <p class="texts-paragraph">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+                </div>
+            </div>
         </main>
+        <script src="js/script.js"></script>
     </body>
 </html>
-
